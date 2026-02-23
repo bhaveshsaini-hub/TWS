@@ -1,33 +1,44 @@
-const Hotels = () => {
-  return (
-<section className="hotels" id="hotels">
+import { useNavigate } from "react-router-dom";
 
+import h1 from "../assets/hotels/redstone/2.png";
+import h2 from "../assets/hotels/redstone/3.jpg"; // ✅ FIXED
+
+
+const Hotels = () => {
+  const navigate = useNavigate();
+
+  const hotels = [
+    {
+      name: "Redstone Resort",
+      img: h1,
+      slug: "redstone-resort",
+      desc: "Luxury beachfront resort with sunset views",
+    },
+    {
+      name: "Shreyas Palace",
+      img: h2,
+      slug: "shreyas-palace",
+      desc: "Hill-side retreat surrounded by nature",
+    },
+
+  ];
+
+  return (
+    <section className="hotels" id="hotels">
       <h2>Our Hotels</h2>
 
       <div className="hotel-grid">
-        <div className="hotel-card">
-          <img src="/src/assets/images/2.png" alt="Hotel 1" />
-          <h3>Redstone Resort</h3>
-          <p>Luxury beachfront resort with sunset views.</p>
-        </div>
-
-        <div className="hotel-card">
-          <img src="/src/assets/images/3.jpg" alt="Hotel 2" />
-          <h3>Shreyas Palace</h3>
-          <p>Hill-side retreat surrounded by nature.</p>
-        </div>
-
-        <div className="hotel-card">
-          <img src="/src/assets/images/4.png" alt="Hotel 3" />
-          <h3>Western Grace</h3>
-          <p>Peaceful resort with valley views.</p>
-        </div>
-
-        <div className="hotel-card">
-          <img src="/src/assets/images/5.png" alt="Hotel 4" />
-          <h3>Smita Villa</h3>
-          <p>Premium stay near pristine beaches.</p>
-        </div>
+        {hotels.map((hotel) => (
+          <div
+            key={hotel.slug}
+            className="hotel-card"
+            onClick={() => navigate(`/hotels/${hotel.slug}`)}
+          >
+            <img src={hotel.img} alt={hotel.name} />
+            <h3>{hotel.name}</h3>
+            <p>{hotel.desc}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

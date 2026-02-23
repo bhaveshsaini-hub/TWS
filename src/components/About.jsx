@@ -1,8 +1,8 @@
-import logo from "../assets/images/6.png";
+import logo from "../assets/hotels/redstone/3.jpeg";
 
 const About = () => {
   return (
-    <section className="about"id="about">
+    <section id="about" className="about">
 
       {/* TITLE — always first */}
       <h2 className="about-title">About Us</h2>

@@ -9,8 +9,7 @@ import "./styles/main.css";
 
 function App() {
   return (
-    <BrowserRouter basename="/TWS">
-
+    <BrowserRouter>
       <Navbar />
       <ScrollReveal />
 

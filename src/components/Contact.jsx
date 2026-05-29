@@ -1,24 +1,22 @@
 const Contact = () => {
   return (
-<section className="contact" id="contact">
+    <section className="contact reveal-on-scroll" id="contact">
+      <h2 className="reveal-on-scroll">Contact Us</h2>
 
-      <h2>Contact Us</h2>
-      <p>
+      <p className="reveal-on-scroll reveal-delay-1">
         We’d love to hear from you. Reach out to us for any queries or
         information.
       </p>
 
-      <div className="contact-details">
-
-
-        <div>
+      <div className="contact-details reveal-on-scroll reveal-delay-2">
+        <div className="contact-phone">
           <h4>📞 Phone</h4>
-          <p>+91 98765 43210</p>
-        </div>
 
-        <div>
-          <h4>✉️ Email</h4>
-          <p>info@twcresort.com</p>
+          <div className="phone-row">
+            <a href="tel:+918652228686">+91 86522 28686</a>
+            <span className="divider">|</span>
+            <a href="tel:+919833991326">+91 98339 91326</a>
+          </div>
         </div>
       </div>
     </section>

@@ -1,6 +1,8 @@
+import homeBackground from "../assets/background/home-bg.jpg";
+
 const Hero = () => {
   return (
-<section className="hero" id="home">
+<section className="hero" id="home" style={{ "--hero-bg": `url(${homeBackground})` }}>
 
       <div className="hero-overlay"></div>
 

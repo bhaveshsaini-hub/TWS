@@ -1312,3 +1312,19 @@ html {
     height: 52px;
   }
 }
+/* MOBILE TEXT FIX */
+@media (max-width: 768px) {
+  .about,
+  .about p,
+  .about h2,
+  .about h3,
+  .about-text,
+  .contact,
+  .contact p,
+  .contact h2,
+  .contact h4,
+  .contact-details p,
+  .phone-row a {
+    color: #111 !important;
+  }
+}

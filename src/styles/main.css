@@ -1335,3 +1335,59 @@ html {
     color: #111 !important;
   }
 }
+.booking-numbers {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.booking-card strong a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  margin-top: 5px;
+}
+
+.booking-card strong a:hover {
+  color: #c9a24d;
+}
+
+@media (max-width: 768px) {
+  .booking-numbers {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.book-dropdown {
+  position: relative;
+}
+
+.book-options {
+  position: absolute;
+  top: 60px;
+  left: 0;
+
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  min-width: 240px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  z-index: 100;
+}
+
+.book-options a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+}
+
+.book-options a:hover {
+  color: #c9a24d;
+}

@@ -15,7 +15,7 @@ const Contact = () => {
           <div className="phone-row">
             <a href="tel:+918652228686">+91 86522 28686</a>
             <span className="divider">|</span>
-            <a href="tel:+919833991326">+91 98339 91326</a>
+            <a href="tel:+918828034586">+91 88280 34586</a>
           </div>
         </div>
       </div>

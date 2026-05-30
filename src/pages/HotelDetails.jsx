@@ -40,7 +40,7 @@ const hotelsData = {
     location: "Nagaon, Alibaug",
     rating: "4.8",
     price: "Call for the best price",
-    phone: "+91 86522 28686",
+    phone: "+91 86522 28686/     \n+91 98339 91326",
     images: redstoneImages,
     food: menuImage,
     mapLink: "https://www.google.com/maps/search/?api=1&query=Redstone%20Resort%20Nagaon%20Alibaug",
@@ -65,7 +65,7 @@ const hotelsData = {
     location: "Alibaug, Maharashtra",
     rating: "4.7",
     price: "Call for the best price",
-    phone: "+91 86522 28686",
+    phone: "+91 86522 28686\n+91 98339 91326",
     images: shreyasImages,
     food: menuImage,
     mapLink: "https://www.google.com/maps/search/?api=1&query=Shreyas%20Palace%20Alibaug",
@@ -89,7 +89,7 @@ const hotelsData = {
     location: "Nagaon Beach, Alibaug",
     rating: "4.6",
     price: "Call for the best price",
-    phone: "+91 86522 28686",
+    phone: "+91 86522 28686\n+91 98339 91326",
     images: matoshreeImages,
     food: menuImage,
     mapLink: "https://www.google.com/maps/search/?api=1&query=Matoshree%20Cottage%20Nagaon%20Beach%20Alibaug",
@@ -162,19 +162,32 @@ const HotelDetails = () => {
             <h1>{hotel.name}</h1>
             <p className="hotel-desc">{hotel.desc}</p>
 
-            <div className="hotel-actions">
-              <a className="primary-btn" href={`tel:${hotel.phone.replace(/\s/g, "")}`}>
-                Book Now
-              </a>
-              <a
-                className="secondary-btn"
-                href={hotel.mapLink}
-                target="_blank"
-                rel="noreferrer"
-              >
-                View Map
-              </a>
-            </div>
+<div className="hotel-actions">
+  <details className="book-dropdown">
+    <summary className="primary-btn">
+      📞 Book Now
+    </summary>
+
+    <div className="book-options">
+      <a href="tel:+918652228686">
+        📞 +91 86522 28686
+      </a>
+
+      <a href="tel:+919833991326">
+        📞 +91 98339 91326
+      </a>
+    </div>
+  </details>
+
+  <a
+    className="secondary-btn"
+    href={hotel.mapLink}
+    target="_blank"
+    rel="noreferrer"
+  >
+    📍 View Map
+  </a>
+</div>
           </div>
 
           <aside className="booking-card reveal-on-scroll reveal-delay-1" aria-label="Quick hotel information">
@@ -186,10 +199,21 @@ const HotelDetails = () => {
               <span>Best Price</span>
               <strong>{hotel.price}</strong>
             </div>
-            <div>
-              <span>Call</span>
-              <strong>{hotel.phone}</strong>
-            </div>
+<div>
+  <span>Call</span>
+
+  <strong>
+    <a href="tel:+918652228686">
+      +91 86522 28686
+    </a>
+
+    <br />
+
+    <a href="tel:+919833991326">
+      +91 98339 91326
+    </a>
+  </strong>
+</div>
           </aside>
         </div>
 
